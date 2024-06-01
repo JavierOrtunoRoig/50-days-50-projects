@@ -7,7 +7,47 @@
     <title>50 day 50 projects</title>
   </head>
 
-  <body class="w-full h-full flex justify-center items-center">
-    <slot />
+  <body class="w-full h-full flex">
+    <aside class="h-full w-96 relative bg-base-300 overflow-auto">
+      <ul class="px-4">
+        <li class="py-4">
+          <a href="/" class="text-4xl font-bold hover:text-blue-400">Home</a>
+        </li>
+      </ul>
+    </aside>
+    <main class="w-full h-full">
+      <slot />
+    </main>
   </body>
 </html>
+
+<script>
+  import project from "@/projects.json";
+  console.log({ a: window.location.pathname });
+  if (window.location.pathname !== "/") {
+    // list all projects and link to the project page
+    const $ul = document.querySelector("aside ul") as HTMLUListElement;
+    project.forEach(({ done, name, urlSegment }) => {
+      const li = document.createElement("li");
+      const $a = document.createElement("a");
+      const doneIcon = done ? "✅" : "❌";
+
+      li.classList.add(
+        "border-b",
+        "border-gray-600",
+        "py-2",
+        "last:border-none",
+      );
+
+      $a.classList.add("hover:text-blue-400");
+      $a.href = urlSegment;
+      $a.textContent = `${doneIcon} ${name}`;
+
+      li.appendChild($a);
+      $ul.appendChild(li);
+    });
+  } else {
+    const aside = document.querySelector("aside") as HTMLDivElement;
+    aside.remove();
+  }
+</script>
