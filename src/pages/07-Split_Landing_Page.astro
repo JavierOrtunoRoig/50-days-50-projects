@@ -1,0 +1,63 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="w-full h-full flex">
+    <div class="half-container full-center flex-col gap-8">
+      <h2 class="z-10 text-6xl font-bold text-white">Playstation 5</h2>
+      <button class="z-10 text-white py-4 px-12 border border-white text-xl"
+        >Buy now</button
+      >
+    </div>
+    <div class="half-container full-center flex-col gap-8">
+      <h2 class="z-10 text-6xl font-bold text-white">Xbox Series X</h2>
+      <button class="z-10 text-white py-4 px-12 border border-white text-xl"
+        >Buy now</button
+      >
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .half-container {
+    @apply h-full
+      w-1/2
+      relative
+      bg-cover
+      bg-center
+      bg-no-repeat
+      transition-all
+      duration-1000
+      hover:w-full;
+
+    &:first-child {
+      background-image: url("/ps.jpg");
+
+      &::after {
+        content: "";
+        @apply absolute
+          block
+          w-full
+          h-full
+          inset-0
+          bg-blue-700
+          bg-opacity-50;
+      }
+    }
+
+    &:last-child {
+      background-image: url("/xbox.jpg");
+      &::after {
+        content: "";
+        @apply absolute
+          block
+          w-full
+          h-full
+          inset-0
+          bg-gray-700
+          bg-opacity-50;
+      }
+    }
+  }
+</style>
