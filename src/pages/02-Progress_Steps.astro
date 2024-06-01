@@ -1,0 +1,73 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="full-center flex-col gap-8">
+    <div
+      class="relative flex gap-12 before:bg-base-300 before:absolute before:top-1/2 before:-translate-y-1/2 before:rounded-sm before:w-full before:h-1 before:-z-10"
+    >
+      <div
+        id="progress"
+        class="h-1 w-0 bg-cyan-500 absolute top-1/2 -translate-y-1/2 rounded-sm -z-10 transition-all duration-500"
+      >
+      </div>
+      <div class="circle active">1</div>
+      <div class="circle">2</div>
+      <div class="circle">3</div>
+      <div class="circle">4</div>
+    </div>
+
+    <div>
+      <button class="btn">Prev</button>
+      <button class="btn">Next</button>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .circle {
+    @apply w-16
+    h-16
+    center
+    text-xl
+    font-bold
+    rounded-full
+    border-4
+    border-base-300
+    bg-base-100;
+    transition: all 0.5s;
+  }
+
+  .active {
+    @apply border-cyan-500;
+  }
+</style>
+
+<script>
+  const $prevBtn = document.querySelector(
+    "button:nth-child(1)",
+  ) as HTMLButtonElement;
+  const $nextBtn = document.querySelector(
+    "button:nth-child(2)",
+  ) as HTMLButtonElement;
+  const steps = document.querySelectorAll(
+    ".circle",
+  ) as NodeListOf<HTMLDivElement>;
+
+  const $progress = document.querySelector("#progress") as HTMLDivElement;
+  const eachStep = 100 / 3;
+  let step = 0;
+
+  $prevBtn.addEventListener("click", () => {
+    steps[step].classList.remove("active");
+    step--;
+    $progress.style.width = `${eachStep * step}%`;
+  });
+
+  $nextBtn.addEventListener("click", () => {
+    step++;
+    $progress.style.width = `${eachStep * step}%`;
+    steps[step].classList.add("active");
+  });
+</script>
