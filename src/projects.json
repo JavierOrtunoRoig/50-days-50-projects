@@ -1,0 +1,252 @@
+[
+  {
+    "name": "1. Expanding Cards",
+    "urlSegment": "01-Expanding_Card",
+    "done": true
+  },
+  {
+    "name": "2. Progress Steps",
+    "urlSegment": "02-Progress_Steps",
+    "done": false
+  },
+  {
+    "name": "3. Rotating Navigation Animation",
+    "urlSegment": "03-Rotating_Navigation_Animation",
+    "done": false
+  },
+  {
+    "name": "4. Hidden Search Widget",
+    "urlSegment": "04-Hidden_Search_Widget",
+    "done": false
+  },
+  {
+    "name": "5. Blurry Loading",
+    "urlSegment": "05-Blurry_Loading",
+    "done": false
+  },
+  {
+    "name": "6. Scroll Animation",
+    "urlSegment": "06-Scroll_Animation",
+    "done": false
+  },
+  {
+    "name": "7. Split Landing Page",
+    "urlSegment": "07-Split_Landing_Page",
+    "done": false
+  },
+  {
+    "name": "8. Form Wave",
+    "urlSegment": "08-Form_Wave",
+    "done": false
+  },
+  {
+    "name": "9. Sound Board",
+    "urlSegment": "09-Sound_Board",
+    "done": false
+  },
+  {
+    "name": "10. Dad Jokes",
+    "urlSegment": "10-Dad_Jokes",
+    "done": false
+  },
+  {
+    "name": "11. Event Keycodes",
+    "urlSegment": "11-Event-Keycodes",
+    "done": false
+  },
+  {
+    "name": "12. Faq Collapse",
+    "urlSegment": "12-Faq_Collapse",
+    "done": false
+  },
+  {
+    "name": "13. Random Choice Picker",
+    "urlSegment": "13-Random_Choice_Picker",
+    "done": false
+  },
+  {
+    "name": "14. Animated Navigation",
+    "urlSegment": "14-Animated_Navigation",
+    "done": false
+  },
+  {
+    "name": "15. Incrementing Counter",
+    "urlSegment": "15-Incrementing_Counter",
+    "done": false
+  },
+  {
+    "name": "16. Drink Water",
+    "urlSegment": "16-Drink_Water",
+    "done": false
+  },
+  {
+    "name": "17. Movie App",
+    "urlSegment": "17-Movie_App",
+    "done": false
+  },
+  {
+    "name": "18. Background Slider",
+    "urlSegment": "18-Background-Slider",
+    "done": false
+  },
+  {
+    "name": "19. Theme Clock",
+    "urlSegment": "19-Theme_Clock",
+    "done": false
+  },
+  {
+    "name": "20. Button Ripple Effect",
+    "urlSegment": "20-Button_Ripple_Effect",
+    "done": false
+  },
+  {
+    "name": "21. Drag N Drop",
+    "urlSegment": "21-Drag_N_Drop",
+    "done": false
+  },
+  {
+    "name": "22. Drawing App",
+    "urlSegment": "22-Drawing_App",
+    "done": false
+  },
+  {
+    "name": "23. Kinetic Loader",
+    "urlSegment": "23-Kinetic_Loader",
+    "done": false
+  },
+  {
+    "name": "24. Content Placeholder",
+    "urlSegment": "24-Content_Placeholder",
+    "done": false
+  },
+  {
+    "name": "25. Sticky Navbar",
+    "urlSegment": "25-Sticky_Navbar",
+    "done": false
+  },
+  {
+    "name": "26. Double Vertical Slider",
+    "urlSegment": "26-Double_Vertical_Slider",
+    "done": false
+  },
+  {
+    "name": "27. Toast Notification",
+    "urlSegment": "27-Toast_Notification",
+    "done": false
+  },
+  {
+    "name": "28. GitHub Profiles",
+    "urlSegment": "28-GitHub_Profiles",
+    "done": false
+  },
+  {
+    "name": "29. Double Click Heart",
+    "urlSegment": "29-Double_Click_Heart",
+    "done": false
+  },
+  {
+    "name": "30. Auto Text Effect",
+    "urlSegment": "30-Auto_Text_Effect",
+    "done": false
+  },
+  {
+    "name": "31. Password Generator",
+    "urlSegment": "31-Password_Generator",
+    "done": false
+  },
+  {
+    "name": "32. Good Cheap Fast",
+    "urlSegment": "32-Good_Cheap_Fast",
+    "done": false
+  },
+  {
+    "name": "33. Notes App",
+    "urlSegment": "33-Notes_App",
+    "done": false
+  },
+  {
+    "name": "34. Animated Countdown",
+    "urlSegment": "34-Animated_Countdown",
+    "done": false
+  },
+  {
+    "name": "35. Image Carousel",
+    "urlSegment": "35-Image_Carousel",
+    "done": false
+  },
+  {
+    "name": "36. Hoverboard",
+    "urlSegment": "36-Hoverboard",
+    "done": false
+  },
+  {
+    "name": "37. Pokedex",
+    "urlSegment": "37-Pokedex",
+    "done": false
+  },
+  {
+    "name": "38. Mobile Tab Navigation",
+    "urlSegment": "38-Mobile_Tab_Navigation",
+    "done": false
+  },
+  {
+    "name": "39. Password Strength Background",
+    "urlSegment": "39-Password_Strength_Background",
+    "done": false
+  },
+  {
+    "name": "40. 3d Background Boxes",
+    "urlSegment": "40-3d_Background_Boxes",
+    "done": false
+  },
+  {
+    "name": "41. Verify Account UI",
+    "urlSegment": "41-Verify_Account_UI",
+    "done": false
+  },
+  {
+    "name": "42. Live User Filter",
+    "urlSegment": "42-Live_User_Filter",
+    "done": false
+  },
+  {
+    "name": "43. Feedback UI Design",
+    "urlSegment": "43-Feedback_UI_Design",
+    "done": false
+  },
+  {
+    "name": "44. Custom Range Slider",
+    "urlSegment": "44-Custom_Range_Slider",
+    "done": false
+  },
+  {
+    "name": "45. Netflix Mobile Navigation",
+    "urlSegment": "45-Netflix_Mobile_Navigation",
+    "done": false
+  },
+  {
+    "name": "46. Quiz App",
+    "urlSegment": "46-Quiz_App",
+    "done": false
+  },
+  {
+    "name": "47. Testimonial Box Switcher",
+    "urlSegment": "47-Testimonial_Box_Switcher",
+    "done": false
+  },
+  {
+    "name": "48. Random Image Feed",
+    "urlSegment": "48-Random_Image_Feed",
+    "done": false
+  },
+  {
+    "name": "49. TODO List",
+    "urlSegment": "49-TODO_List",
+    "done": false
+  },
+  {
+    "name": "50. Insect Catch Game",
+    "urlSegment": "50-Insect_Catch_Game",
+    "done": false
+  }
+]
