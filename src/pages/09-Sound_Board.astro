@@ -1,0 +1,24 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="full-center space-x-2">
+    <button class="btn text-2xl">applause</button>
+    <button class="btn text-2xl">boo</button>
+    <button class="btn text-2xl">gasp</button>
+    <button class="btn text-2xl">tada</button>
+    <button class="btn text-2xl">victory</button>
+    <button class="btn text-2xl">wrong</button>
+  </div>
+</Layout>
+
+<script>
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const audio = new Audio(`/sounds/${button.textContent}.mp3`);
+      audio.play();
+    });
+  });
+</script>
