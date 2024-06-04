@@ -18,7 +18,11 @@ import Layout from "@/Layout.astro";
 </style>
 
 <script>
-  const colors = {
+  interface PokeTypes {
+    [key: string]: string;
+  }
+
+  const colors: PokeTypes = {
     fire: "bg-[#FDDFDF]",
     grass: "bg-[#DEFDE0]",
     electric: "bg-[#FCF7DE]",
