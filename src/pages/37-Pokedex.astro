@@ -1,0 +1,84 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div
+    id="poke-container"
+    class="h-full flex gap-4 flex-wrap justify-center overflow-auto"
+  >
+  </div>
+</Layout>
+
+<style>
+  img {
+    background-color: #ffffff9c;
+    border-radius: 50%;
+  }
+</style>
+
+<script>
+  const colors = {
+    fire: "bg-[#FDDFDF]",
+    grass: "bg-[#DEFDE0]",
+    electric: "bg-[#FCF7DE]",
+    water: "bg-[#DEF3FD]",
+    ground: "bg-[#F4E7DA]",
+    rock: "bg-[#D5D5D4]",
+    fairy: "bg-[#FCEAFF]",
+    poison: "bg-[#DDAEFF]",
+    bug: "bg-[#F8D5A3]",
+    dragon: "bg-[#97B3E6]",
+    psychic: "bg-[#EAEDA1]",
+    flying: "bg-[#F5F5F5]",
+    fighting: "bg-[#E6E0D4]",
+    normal: "bg-[#F5F5F5]",
+  };
+  const mainTypes = Object.keys(colors);
+  const container = document.getElementById("poke-container") as HTMLDivElement;
+
+  const getPokemon = async (id: number) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    // createPokemonCard(data);
+    return data;
+  };
+
+  const createPokemonCard = (pokemon: any) => {
+    const pokemonElement = document.createElement("div");
+
+    const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    const id = pokemon.id.toString().padStart(3, "0");
+
+    const pokeTypes = pokemon.types.map((type: any) => type.type.name);
+    const type = mainTypes.find(
+      (type) => pokeTypes.indexOf(type) > -1
+    ) as string;
+    const color = colors[type];
+
+    container.appendChild(pokemonElement);
+
+    pokemonElement.outerHTML = `
+      <div class="w-44 h-64 ${color} rounded-lg flex flex-col items-center">
+        <div class="w-full h-1/2 full-center">
+          <img
+            class="size-max object-cover"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
+            alt="${name}"
+          />
+        </div>
+        <div class="h-1/2 flex flex-col items-center justify-evenly">
+          <span class="text-black bg-gray-400/30 px-3 py-1 rounded-lg">#${id}</span>
+          <p class="text-black text-2xl font-bold">${name}</p>
+          <span class="text-black">Type: ${type}</span>
+        </div>
+      </div>
+    `;
+  };
+
+  // get 150 pokemon in async way with promise.all
+  const promises = Array.from({ length: 150 }, (_, i) => getPokemon(i + 1));
+  const pokemonsData = await Promise.all(promises);
+  pokemonsData.forEach((pokemon) => createPokemonCard(pokemon));
+</script>
