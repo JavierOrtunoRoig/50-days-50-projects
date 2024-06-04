@@ -1,0 +1,60 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="full-center flex-col">
+    <div id="initial-message" class="border border-white p-6">
+      <p class="text-xl text-white font-bold">
+        Press any key to get the keyCodes
+      </p>
+    </div>
+
+    <div id="key-results" class="hidden gap-8">
+      <div class="flex flex-col items-center">
+        <p class="font-bold text-lg">event.key</p>
+        <div
+          class="flex justify-center items-center size-24 border border-white"
+        >
+          <p id="key" class="text-2xl text-white"></p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="font-bold text-lg">event.keyCode</p>
+        <div
+          class="flex justify-center items-center size-24 border border-white"
+        >
+          <p id="keyCode" class="text-2xl text-white"></p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center">
+        <p class="font-bold text-lg">event.code</p>
+        <div
+          class="flex justify-center items-center size-24 border border-white"
+        >
+          <p id="code" class="text-2xl text-white"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const initialMessage = document.getElementById(
+    "initial-message"
+  ) as HTMLElement;
+  const keyResults = document.getElementById("key-results") as HTMLDivElement;
+  const key = document.getElementById("key") as HTMLParagraphElement;
+  const keyCode = document.getElementById("keyCode") as HTMLParagraphElement;
+  const code = document.getElementById("code") as HTMLParagraphElement;
+
+  document.addEventListener("keydown", (e) => {
+    keyResults.classList.remove("hidden");
+    keyResults.classList.add("flex");
+
+    initialMessage.style.display = "none";
+    key.textContent = e.key;
+    keyCode.textContent = String(e.keyCode);
+    code.textContent = e.code;
+  });
+</script>
