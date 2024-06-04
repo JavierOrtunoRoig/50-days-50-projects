@@ -1,0 +1,50 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="full-center">
+    <div
+      class="w-3/4 h-1/2 bg-white full-center flex-col rounded-lg shadow-2xl gap-8 p-4"
+    >
+      <p class="text-2xl">Don't Laugh Challenge</p>
+      <p class="text-3xl text-black text-center">
+        {">>"} Jokes goes here
+      </p>
+      <button class="btn">Get another joke</button>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const jokes = [
+    "What did the drummer call his twin daughters? Anna one, Anna two!",
+    "Want to hear a joke about construction? I'm still working on it.",
+    "What’s Forrest Gump’s password? 1forrest1",
+    "To whoever stole my copy of Microsoft Office, I will find you. You have my Word!",
+    "I tell dad jokes, but I don't have any kids. I'm a faux pa.",
+    "What do you call a hippie's wife? Mississippi.",
+    "5/4 of people admit that they’re bad with fractions.",
+    "The rotation of earth really makes my day.",
+    "Did you know the first French fries weren't actually cooked in France? They were cooked in Greece.",
+    "Why did the coffee file a police report? It got mugged.",
+    "I ordered a chicken and an egg from Amazon. I’ll let you know.",
+    "Why don't skeletons ever go trick or treating? Because they have no body to go with.",
+    "What do you call cheese that isn't yours? Nacho Cheese.",
+    "I don't trust stairs. They're always up to something.",
+    "Why can't a nose be 12 inches long? Because then it would be a foot.",
+    "I made a pencil with two erasers. It was pointless.",
+    "You know, people say they pick their nose, but I feel like I was just born with mine.",
+    "Why can't you hear a psychiatrist using the bathroom? Because the 'P' is silent.",
+  ];
+  const jokePlaceholder = document.querySelector(
+    ".text-black"
+  ) as HTMLParagraphElement;
+
+  const getJoke = () => {
+    const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+    jokePlaceholder.textContent = randomJoke;
+  };
+
+  document.querySelector(".btn")?.addEventListener("click", getJoke);
+</script>
