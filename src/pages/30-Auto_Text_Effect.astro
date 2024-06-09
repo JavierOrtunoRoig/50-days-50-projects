@@ -1,0 +1,42 @@
+---
+import Layout from "@/Layout.astro";
+---
+
+<Layout>
+  <div class="full-center flex-col gap-8">
+    <span id="effect" class="text-4xl"></span>
+    <div>
+      <span>Speed: </span>
+      <input type="number" value="1" min="1" max="10" />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const TEXT_TO_WRITE = "Hello World!";
+  const $span = document.querySelector("#effect") as HTMLSpanElement;
+  const $input = document.querySelector("input") as HTMLInputElement;
+
+  let speed = 25 * 10 - 25 * Number($input.value) + 25;
+
+  let index = 0;
+  const lastIndex = TEXT_TO_WRITE.length;
+
+  const writeText = () => {
+    $span.textContent += TEXT_TO_WRITE[index];
+    index++;
+
+    if (index > lastIndex) {
+      index = 0;
+      $span.textContent = "";
+    }
+  };
+
+  let interval = setInterval(writeText, speed);
+
+  $input.addEventListener("input", () => {
+    clearInterval(interval);
+    speed = 25 * Number($input.value);
+    interval = setInterval(writeText, speed);
+  });
+</script>
